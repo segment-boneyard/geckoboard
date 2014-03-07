@@ -1,7 +1,7 @@
 
 # geckoboard
 
-  Geckoboard API for node.
+  [Geckoboard](http://www.geckoboard.com/) API for node. Push data to [custom widgets](http://www.geckoboard.com/developers/custom-widgets).
 
 ## Installation
 
