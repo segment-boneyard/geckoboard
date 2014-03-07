@@ -1,0 +1,17 @@
+{
+  "name": "geckoboard",
+  "version": "0.0.1",
+  "repository": "git://github.com/segmentio/geckoboard.git",
+  "description": "Geckboard API for node",
+  "keywords": [
+    "dashboards",
+    "geckoboard",
+    "API"
+  ],
+  "dependencies": {
+    "debug": "~0.7.4",
+    "superagent": "~0.16.0",
+    "clone": "~0.1.11",
+    "bind": "git://github.com/ianstormtaylor/bind"
+  }
+}
