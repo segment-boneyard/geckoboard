@@ -3,6 +3,10 @@
 
   Geckoboard API for node.
 
+## Installation
+
+    $ npm install segmentio/geckoboard
+
 ## Example
 
 ```js
