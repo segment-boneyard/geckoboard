@@ -1,6 +1,6 @@
 {
   "name": "geckoboard",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": "git://github.com/segmentio/geckoboard.git",
   "description": "Geckboard API for node",
   "keywords": [

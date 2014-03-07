@@ -2,7 +2,6 @@
 var bind = require('bind');
 var clone = require('clone');
 var debug = require('debug')('geckoboard');
-var defaults = require('defaults');
 var request = require('superagent');
 
 /**
