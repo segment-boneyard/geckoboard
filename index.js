@@ -179,9 +179,16 @@ Widget.prototype.push = function (payload, callback) {
     .post(url)
     .send({ api_key: this.apiKey, data: payload })
     .end(function (err, res) {
-      if (err) return callback(err);
+      if (err) {
+        debug('geckoboard error: %s', err.toString());
+        if (callback) return callback(err);
+        else return;
+      }
       debug('geckoboard response [%d]: %s', res.statusCode, res.text);
-      if (res.statusCode !== 200) return callback(new Error('Widget error: ' + res.text));
-      callback();
+      if (res.statusCode !== 200) {
+        if (callback) return callback(new Error('Widget error: ' + res.text));
+      } else {
+        if (callback) callback();
+      }
   });
 };
