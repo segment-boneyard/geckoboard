@@ -44,6 +44,10 @@ widget.number(100, function (err) {
 
   Push `text` to a widget.
 
+#### #rag(map, callback)
+
+  Push `map` object to a RAG chart widget.
+
 ## License
 
 MIT
