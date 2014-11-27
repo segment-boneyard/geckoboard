@@ -48,7 +48,7 @@ function Widget (apiKey, widgetId, options) {
 
 /**
  * Push a number payload.
- * http://www.geckoboard.com/developers/custom-widgets/widget-types/number-and-optional-secondary-stat
+ * https://developer.geckoboard.com/#number-and-secondary-stat
  *
  * @param {String} num
  * @param {Function} callback
@@ -66,7 +66,7 @@ Widget.prototype.number = function (num, callback) {
 
 /**
  * Push a percentage change.
- * http://www.geckoboard.com/developers/custom-widgets/widget-types/number-and-optional-secondary-stat
+ * https://developer.geckoboard.com/#number-and-secondary-stat
  *
  * @param {Number} current
  * @param {Number} previous
