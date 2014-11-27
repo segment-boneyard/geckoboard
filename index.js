@@ -71,21 +71,29 @@ Widget.prototype.number = function (num, callback) {
  * @param {Number} current
  * @param {Number} previous
  * @param {Function} callback
+ *
+ * Optionally specify a `type` in the `options` object when creating 
+ * the `Widget`:
+ *
+ *    geckoboard(WIDGET_ID, { type: 'reverse' }).percentageChange(val1, val2);
+ *
  */
 
 Widget.prototype.percentageChange = function (current, previous, callback) {
-  var payload = { item: [
-    {
-      text: this.options.label1 || '',
-      prefix: this.options.prefix,
-      value: current
-    },
-    {
-      text: this.options.label2 || '',
-      prefix: this.options.prefix,
-      value: previous
-    }
-  ]};
+  var payload = { 
+    item: [
+      {
+        text: this.options.label1 || '',
+        prefix: this.options.prefix,
+        value: current
+      },
+      {
+        text: this.options.label2 || '',
+        prefix: this.options.prefix,
+        value: previous
+      }],
+    type: this.options.type
+  };
   this.push(payload, callback);
 };
 
