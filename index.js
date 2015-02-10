@@ -166,6 +166,25 @@ Widget.prototype.funnel = function (map, callback) {
 };
 
 /**
+ * Push a list.
+ * https://developer.geckoboard.com/#list
+ *
+ * @param {Object} map
+ * @param {Function} callback
+ */
+
+Widget.prototype.list = function (array, callback) {
+  var payload = {
+    item: []
+  };
+  Object.keys(map).forEach(function (key) {
+    var val = map[key];
+    payload.item.push({ label: key, value: val });
+  });
+  this.push(payload, callback);
+};
+
+/**
  * Push a `payload` payload to a Widget widget.
  *
  * @param {Object} payload
