@@ -173,14 +173,11 @@ Widget.prototype.funnel = function (map, callback) {
  * @param {Function} callback
  */
 
-Widget.prototype.list = function (array, callback) {
-  var payload = {
-    item: []
-  };
-  Object.keys(map).forEach(function (key) {
-    var val = map[key];
-    payload.item.push({ label: key, value: val });
-  });
+Widget.prototype.list = function (arr, callback) {
+  var payload = [];
+  arr.forEach(function (obj) {
+    payload.push({title: { text: obj.key }, description: obj.val });
+  });      
   this.push(payload, callback);
 };
 
